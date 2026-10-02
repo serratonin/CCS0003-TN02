@@ -1,0 +1,6 @@
+1. Why are the rounded and explicitly cast integer results sometimes different?
+Because rounded integers round to the nearest ten, while explicitly cast integers do not round the decimal.
+2. Which result would be more appropriate for an official grade report, and why?
+Rounded grades are more appropriate because truncated grades lower the value, and it is important to acknowledge the decimal value of a student's grade. 
+3. What role does implicit type conversion play when multiplying scores by decimal weights?
+It avoids problems when multiplying a whole number without a decimal point, which could otherwise produce incorrect answers. 
