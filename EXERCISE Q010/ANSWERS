@@ -1,0 +1,9 @@
+1. Why is getline() preferred over cin >> productName for this exercise?
+Because getline() detects spaces, while cin>> does not
+2. Why is ceil() correct for box count even when the final box is not full?
+Because it rounds it to the next highest integer, making sure that each product gets a box.
+3. Which parts of this capstone demonstrate input, processing, output, type conversion, mathematical functions, and formatting?
+std::getline() and std::cin are for input; subtotal, discountAmount, discountedTotal, and finalAmountDue are for processing,
+std::cout is used for output, static_cast<double>() converts the integer into a double and ceil() back into an integer, 
+td::ceil() rounds the exact fractional box requirement up to the next integer, 
+and std::fixed paired with std::setprecision(2) enforces two decimal places for currency, while \t and \n align text and format line breaks.
