@@ -1,0 +1,6 @@
+1. Why would round() be unsafe for determining the number of paint cans to purchase?
+ So that it can measure precise measurements for paint cans in decimals.
+2. What is the difference between the exact-can value and the purchase quantity?
+An exact-can can provide the precise decimal value needed, while the purchase quantity needs to be a whole number.
+3. For a negative decimal number, how would ceil() behave differently from trunc()?
+trunc() will always move infinitely to the left while ceil() would move to the right
