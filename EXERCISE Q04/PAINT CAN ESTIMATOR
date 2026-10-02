@@ -1,0 +1,36 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+
+int main() {
+    double width, height, coveragePerCan;
+    int numCoats;
+
+    std::cout << "Enter wall width (in meters): ";
+    std::cin >> width;
+    std::cout << "\n";
+
+    std::cout << "Enter wall height (in meters): ";
+    std::cin >> height;
+    std::cout << "\n";
+
+    std::cout << "Enter number of coats: ";
+    std::cin >> numCoats;
+    std::cout << "\n";
+
+    std::cout << "Enter coverage per can (in sq meters): ";
+    std::cin >> coveragePerCan;
+    std::cout << "\n";
+
+    double wallArea = width * height;
+    double totalPaintArea = wallArea * numCoats;
+    double exactCans = totalPaintArea / coveragePerCan;
+    int cansToBuy = static_cast<int>(std::ceil(exactCans));
+
+    std::cout << std::fixed << std::setprecision(2);
+    std::cout << "Wall area: " << wallArea << " sq meters\n";
+    std::cout << "Exact cans needed: " << exactCans << "\n";
+    std::cout << "Cans to buy: " << cansToBuy << "\n";
+
+    return 0;
+}
