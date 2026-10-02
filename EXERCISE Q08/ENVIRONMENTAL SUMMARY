@@ -1,0 +1,32 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+
+int main() {
+    double temp1, temp2, temp3;
+
+    std::cout << "Enter temperature reading 1: ";
+    std::cin >> temp1;
+    std::cout << "\n";
+
+    std::cout << "Enter temperature reading 2: ";
+    std::cin >> temp2;
+    std::cout << "\n";
+
+    std::cout << "Enter temperature reading 3: ";
+    std::cin >> temp3;
+    std::cout << "\n";
+
+    double average = (temp1 + temp2 + temp3) / 3.0;
+    double absDiff = std::fabs(temp1 - temp3);
+
+    std::cout << std::fixed << std::setprecision(3);
+    std::cout << "Original Average: " << average << "\n";
+    std::cout << "Absolute difference (T1 vs T3): " << absDiff << "\n";
+    std::cout << "floor(average): " << std::floor(average) << "\n";
+    std::cout << "ceil(average): " << std::ceil(average) << "\n";
+    std::cout << "trunc(average): " << std::trunc(average) << "\n";
+    std::cout << "round(average): " << std::round(average) << "\n";
+
+    return 0;
+}
