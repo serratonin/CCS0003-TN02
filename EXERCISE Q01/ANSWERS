@@ -1,0 +1,6 @@
+1. Why is double more appropriate than int for the meal price and final bill?
+Double is more appropriate because it can account for decimals, which most likely appear in prices, including meal prices.
+2. What problem can occur if the program divides by the number of students using only integer values?
+It will not show the decimal value of the prices/output
+3. How does setprecision(2) improve the readability of monetary output?
+It can help with the readability of the prices by giving a fixed number of decimal places.
