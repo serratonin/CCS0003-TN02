@@ -1,0 +1,6 @@
+1. For the negative test case, why are floor() and trunc() different?
+Floor() will always round down to negative infinity, while trunc() simply removes the decimal. 
+2. Which function is best when you need the nearest integer rather than always moving up, down, or toward zero?
+Round() is best because it will always round towards 0.
+3. Why is fabs() more suitable than simply removing the minus sign manually?
+Because it will just et the negative sign when the integer is <0.
