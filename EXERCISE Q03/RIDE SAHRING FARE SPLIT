@@ -1,0 +1,35 @@
+#include <iostream>
+#include <iomanip>
+
+int main() {
+    double baseFare, distanceKm, ratePerKm, tollFee, bookingFeePercent;
+    int numPassengers;
+
+    std::cout << "Enter base fare: ";
+    std::cin >> baseFare;
+    std::cout << "Enter distance in km: ";
+    std::cin >> distanceKm;
+    std::cout << "Enter rate per km: ";
+    std::cin >> ratePerKm;
+    std::cout << "Enter toll fee: ";
+    std::cin >> tollFee;
+    std::cout << "Enter booking fee percentage: ";
+    std::cin >> bookingFeePercent;
+    std::cout << "Enter number of passengers: ";
+    std::cin >> numPassengers;
+
+    double distanceCharge = distanceKm * ratePerKm;
+    double preFeeTotal = baseFare + distanceCharge + tollFee;
+    double bookingFee = preFeeTotal * (bookingFeePercent / 100.0);
+    double grandTotal = preFeeTotal + bookingFee;
+    double amountPerPassenger = grandTotal / numPassengers;
+
+    std::cout << std::fixed << std::setprecision(2);
+    std::cout << "Distance charge: " << distanceCharge << "\n";
+    std::cout << "Pre-fee total: " << preFeeTotal << "\n";
+    std::cout << "Booking fee: " << bookingFee << "\n";
+    std::cout << "Grand total: " << grandTotal << "\n";
+    std::cout << "Amount per passenger: " << amountPerPassenger << "\n";
+
+    return 0;
+}
