@@ -1,0 +1,6 @@
+1. Why is long long safer than int for large byte counts?
+So that it can prevent integer overflow.
+2. Why would dividing by 1024 using only integer operands lose information?
+ Because when it is dividing integers, it will discard the remainder (decimal), making it inaccurate.
+3. What is the difference between changing a value's type and changing only how many decimals are displayed?
+Changing a value's type will also change it in the system, but changing only how a decimal is displayed will not change the data in the system.
