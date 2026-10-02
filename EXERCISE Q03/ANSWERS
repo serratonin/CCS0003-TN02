@@ -1,0 +1,6 @@
+1. Why should each cost component be stored in a separate variable instead of one long expression?
+So that it can be easily read and debugged when a problem occurs. 
+2. If passengers were stored as a double instead of an int, would the final numerical result change?
+No, it will not change the numerical result, but it is more appropriate to store it as an int because you do not need a decimal when counting passengers. 
+3. What output-formatting feature makes the fare breakdown easier to verify?
+When it is formatted with a decimal point set to 2 places to represent centavos. 
