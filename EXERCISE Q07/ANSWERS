@@ -1,0 +1,6 @@
+1. Why does a negative dx or dy not make the final distance negative?
+Because pow(dx, 2) and pow(dx, 2) are squared, being incapable of yielding a negative answer
+2. What mathematical role does sqrt() play after adding the squared differences?
+It reverses the square, so that it can be used in units of measurement.
+3. How would the result change if pow(dx, 2) were replaced with dx + 2?
+It will add it, not multiply it.
