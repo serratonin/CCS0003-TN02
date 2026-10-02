@@ -1,1 +1,43 @@
-Testing ngani
+/******************************************************************************
+
+Exercise Q02 - Scholarship Grade Summary
+
+*******************************************************************************/
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    double quizzes, laboratory, project, examination;
+
+    cout << "Enter quiz score: ";
+    cin >> quizzes;
+
+    cout << "Enter laboratory score: ";
+    cin >> laboratory;
+
+    cout << "Enter project score: ";
+    cin >> project;
+
+    cout << "Enter examination score: ";
+    cin >> examination;
+
+    double weightedGrade =
+        (quizzes * 0.20) +
+        (laboratory * 0.25) +
+        (project * 0.25) +
+        (examination * 0.30);
+
+    int roundedGrade = static_cast<int>(round(weightedGrade));
+    int truncatedGrade = static_cast<int>(weightedGrade);
+
+    cout << fixed << setprecision(2);
+
+    cout << "\nWeighted grade: " << weightedGrade << endl;
+    cout << "Rounded whole-number grade: " << roundedGrade << endl;
+    cout << "Integer-truncated grade: " << truncatedGrade << endl;
+
+    return 0;
+}
