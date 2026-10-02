@@ -1,0 +1,6 @@
+1. Why should the processing fee be computed before subtracting the down payment in this scenario?
+It should always be calculated on the full fee so that the computation wouldn't leave out the already paid balance in tuition. 
+2. What happens to the monthly result if integer division is accidentally used?
+It will not be computed correctly, making the student underpay.
+3. Why is fixed with setprecision(2) especially important in finance-related output?
+Because it consistently shows the decimals of the integers representing the centavos.
