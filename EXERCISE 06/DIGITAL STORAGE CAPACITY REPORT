@@ -1,0 +1,28 @@
+#include <iostream>
+#include <iomanip>
+
+int main() {
+    long long bytes;
+
+    std::cout << "Enter file size in bytes: ";
+    std::cin >> bytes;
+    std::cout << "\n";
+
+    double kilobytes = bytes / 1024.0;
+    double megabytes = kilobytes / 1024.0;
+    double gigabytes = megabytes / 1024.0;
+    long long wholeMegabytes = static_cast<long long>(megabytes);
+
+    std::cout << std::fixed;
+
+    std::cout << std::setprecision(2);
+    std::cout << "Kilobytes (KB): " << kilobytes << " KB\n";
+    std::cout << "Megabytes (MB): " << megabytes << " MB\n";
+
+    std::cout << std::setprecision(4);
+    std::cout << "Gigabytes (GB): " << gigabytes << " GB\n";
+
+    std::cout << "Whole MB portion: " << wholeMegabytes << " MB\n";
+
+    return 0;
+}
