@@ -1,0 +1,47 @@
+/ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+/
+/******************************************************************************
+
+Exercise Q01 - Campus Canteen Group Order
+
+*******************************************************************************/
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+    double mealPrice, servicePercentage;
+    int quantity, students;
+
+    cout << "Enter meal price: ";
+    cin >> mealPrice;
+
+    cout << "Enter quantity ordered: ";
+    cin >> quantity;
+
+    cout << "Enter service-charge percentage: ";
+    cin >> servicePercentage;
+
+    cout << "Enter number of students sharing the bill: ";
+    cin >> students;
+
+    if (students <= 0) {
+        cout << "Number of students must be greater than zero." << endl;
+        return 1;
+    }
+
+    double subtotal = mealPrice * quantity;
+    double serviceCharge = subtotal * (servicePercentage / 100.0);
+    double finalBill = subtotal + serviceCharge;
+    double sharePerStudent = finalBill / students;
+
+    cout << fixed << setprecision(2);
+
+    cout << "\nSubtotal: ₱" << subtotal << endl;
+    cout << "Service charge: ₱" << serviceCharge << endl;
+    cout << "Final bill: ₱" << finalBill << endl;
+    cout << "Share per student: ₱" << sharePerStudent << endl;
+
+    return 0;
+}
