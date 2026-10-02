@@ -7,14 +7,19 @@ int main() {
 
     std::cout << "Enter base fare: ";
     std::cin >> baseFare;
+
     std::cout << "Enter distance in km: ";
     std::cin >> distanceKm;
+
     std::cout << "Enter rate per km: ";
     std::cin >> ratePerKm;
+
     std::cout << "Enter toll fee: ";
     std::cin >> tollFee;
+
     std::cout << "Enter booking fee percentage: ";
     std::cin >> bookingFeePercent;
+
     std::cout << "Enter number of passengers: ";
     std::cin >> numPassengers;
 
