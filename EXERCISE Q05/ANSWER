@@ -1,0 +1,6 @@
+1. What incorrect result would integer division give for 137 / 8 before ceil() is applied?
+It would result in 17 because C++ truncates the result. 
+2. Why must the program convert at least one operand to a floating-point type?
+So that it can perform floating-point division and keep its exact decimal value.
+3. When does ceil() leave a value unchanged?
+When it is already a whole number (Example 10.0)
