@@ -1,0 +1,35 @@
+#include <iostream>
+#include <iomanip>
+
+int main() {
+    double baseTuition, feePercentage, downPayment;
+    int numInstallments;
+
+    std::cout << "Enter base tuition amount: ";
+    std::cin >> baseTuition;
+    std::cout << "\n";
+
+    std::cout << "Enter processing fee percentage: ";
+    std::cin >> feePercentage;
+    std::cout << "\n";
+
+    std::cout << "Enter down payment amount: ";
+    std::cin >> downPayment;
+    std::cout << "\n";
+
+    std::cout << "Enter number of monthly installments: ";
+    std::cin >> numInstallments;
+    std::cout << "\n";
+
+    double processingFee = baseTuition * (feePercentage / 100.0);
+    double adjustedTuition = baseTuition + processingFee;
+    double remainingBalance = adjustedTuition - downPayment;
+    double monthlyInstallment = remainingBalance / numInstallments;
+
+    std::cout << std::fixed << std::setprecision(2);
+    std::cout << "Processing Fee: ₱" << processingFee << "\n";
+    std::cout << "Adjusted Tuition: ₱" << adjustedTuition << "\n";
+    std::cout << "Remaining Balance: ₱" << remainingBalance << "\n";
+    std::cout << "Monthly Installment: ₱" << monthlyInstallment << "\n";
+
+    return 0;
