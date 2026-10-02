@@ -1,0 +1,56 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+#include <iomanip>
+
+int main() {
+    std::string productName;
+    double unitPrice, discountPercentage, shippingFeePerBox;
+    int quantity, unitsPerBox;
+
+    std::cout << "Enter product name: ";
+    std::getline(std::cin, productName);
+    std::cout << "\n";
+
+    std::cout << "Enter unit price: ";
+    std::cin >> unitPrice;
+    std::cout << "\n";
+
+    std::cout << "Enter quantity: ";
+    std::cin >> quantity;
+    std::cout << "\n";
+
+    std::cout << "Enter discount percentage: ";
+    std::cin >> discountPercentage;
+    std::cout << "\n";
+
+    std::cout << "Enter shipping fee per box: ";
+    std::cin >> shippingFeePerBox;
+    std::cout << "\n";
+
+    std::cout << "Enter units per box: ";
+    std::cin >> unitsPerBox;
+    std::cout << "\n";
+
+    double subtotal = unitPrice * quantity;
+    double discountAmount = subtotal * (discountPercentage / 100.0);
+    double discountedTotal = subtotal - discountAmount;
+
+    double exactBoxes = static_cast<double>(quantity) / unitsPerBox;
+    int boxesRequired = static_cast<int>(std::ceil(exactBoxes));
+
+    double shippingTotal = boxesRequired * shippingFeePerBox;
+    double finalAmountDue = discountedTotal + shippingTotal;
+
+    std::cout << std::fixed << std::setprecision(2);
+    std::cout << "Product Name:\t" << productName << "\n";
+    std::cout << "Subtotal:\t₱" << subtotal << "\n";
+    std::cout << "Discount Amount:\t₱" << discountAmount << "\n";
+    std::cout << "Discounted Total:\t₱" << discountedTotal << "\n";
+    std::cout << "Exact Boxes:\t" << exactBoxes << "\n";
+    std::cout << "Boxes Required:\t" << boxesRequired << "\n";
+    std::cout << "Shipping Total:\t₱" << shippingTotal << "\n";
+    std::cout << "Final Amount Due:\t₱" << finalAmountDue << "\n";
+
+    return 0;
+}
